@@ -18,7 +18,13 @@ AI-powered network security monitoring and threat detection.
 ## Setup (3 steps)
 
 ### 1. Install dependencies
+check before run 
 ```bash
+
+rm -rf .venv
+python3 -m venv .venv
+source .venv/bin/activate
+
 pip3 install -r requirements.txt
 ```
 
