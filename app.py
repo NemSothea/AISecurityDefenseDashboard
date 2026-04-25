@@ -668,13 +668,3 @@ if __name__ == '__main__':
 
     app.run(debug=False, threaded=True, host='0.0.0.0', port=port)
 
-
-#     # ================= AUTO OPEN =================
-# def open_browser():
-#     webbrowser.open_new("http://127.0.0.1:5000/")
-
-# if name == "main":
-#     load_db()
-#     rebuild_teacher_busy()
-#     Timer(1, open_browser).start()
-#     app.run(debug=True)

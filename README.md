@@ -4,6 +4,9 @@
 A real-time web dashboard built with Python Flask that demonstrates
 AI-powered network security monitoring and threat detection.
 
+## Demo
+![Dashboard demo](demo_img.png)
+
 ---
 
 ## Features
