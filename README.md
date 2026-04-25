@@ -42,7 +42,12 @@ export ANTHROPIC_API_KEY=sk-ant-...
 python app.py
 ```
 
-Then open **http://localhost:8888** in your browser.
+The app will auto-open your browser to **http://localhost:8888**.
+
+To disable auto-open:
+```bash
+export AUTO_OPEN_BROWSER=0
+```
 
 ---
 

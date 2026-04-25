@@ -8,6 +8,9 @@ Open:  http://localhost:8888
 
 from flask import Flask, request, jsonify, render_template_string
 import json, time, random, threading, os
+
+import webbrowser
+
 from datetime import datetime
 from collections import deque
 
@@ -652,4 +655,26 @@ if __name__ == '__main__':
     print("║               SQL Injection  |  Adversarial Attack    ║")
     print("╚══════════════════════════════════════════════════════╝")
     print()
+
+    def _auto_open_browser():
+        url = f"http://127.0.0.1:{port}"
+        try:
+            webbrowser.open(url, new=2)
+        except Exception:
+            pass
+
+    if os.environ.get('AUTO_OPEN_BROWSER', '1').strip().lower() not in {'0', 'false', 'no', 'off'}:
+        threading.Timer(1.0, _auto_open_browser).start()
+
     app.run(debug=False, threaded=True, host='0.0.0.0', port=port)
+
+
+#     # ================= AUTO OPEN =================
+# def open_browser():
+#     webbrowser.open_new("http://127.0.0.1:5000/")
+
+# if name == "main":
+#     load_db()
+#     rebuild_teacher_busy()
+#     Timer(1, open_browser).start()
+#     app.run(debug=True)
